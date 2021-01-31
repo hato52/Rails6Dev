@@ -1,0 +1,12 @@
+version: "3.8"
+services:
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: development
+    ports:
+      - "3000:3000"
+    volumes:
+      - C:\DATA\Developments\DockerVolumes\RailsProjects:/Developments
+    stdin_open: true  # これをつけると標準入力を受け付けるようになり、コンテナが起動し続けてくれる？
